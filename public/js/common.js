@@ -131,13 +131,17 @@ jQuery(document).ready(function ($) {
 		arrows: true,
 		mobileFirst: true,
 		appendArrows: '.header-block__arrow-wrap',
+		autoplay: true,
+		autoplaySpeed: 4000,
 		// centerMode: true,
 		// focusOnSelect: true ,
 		// variableWidth: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 	});
-
+$(".header-block__counter-text .text-primary").click(function(){
+	slickSlide.slick("slickNext");
+})
 	$('.s-5-reasons__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
