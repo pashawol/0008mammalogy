@@ -1,0 +1,23 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line
+		.container
+			.row
+				.col-xl-auto.col
+					+e.logo
+						img.res-i(src="img/logo.png", alt="")
+				.col.d-none.d-xl-block
+					+e.text Узкопрофильный медицинский центр диагностики и&nbsp;лечения заболеваний молочной железы в&nbsp;Харькове.
+				.col-auto.d-none.d-md-block
+					+e.ADDR.addr
+						+icon('mark')
+						| г. Харьков. Ул. Пушкинская 14-А
+				.col-auto.d-none.d-lg-block
+					+e.working-hours Пн-пт: 09.00 - 19.00
+						br
+						| Суббота: 09.00 - 16.00
+						br
+						span.text-primary Воскресенье: выходной.
+				.col-auto
+					+e.tel(href="tel:(057)781-01-11") (057) 781-01-11
+	// end .top-line

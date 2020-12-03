@@ -1,0 +1,64 @@
+.top-line {
+  font-size: 13px;
+  padding-top: 25px;
+  .row{
+    align-items: center;
+  }
+  .icon{
+    font-size: 1em;
+    margin-right: 1em;
+  }
+	&__text{
+    border-left: 1px solid rgba($color: $primary, $alpha: .5);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 230px;
+    padding-left: 30px;
+    color: $primary;
+  }
+
+  &__tel{
+    font-weight: 900;
+    @include media-breakpoint-up(sm) {
+
+      font-size: rem(22);
+    }
+    font-size: rem(16);
+    @extend .text-body;
+  }
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+}

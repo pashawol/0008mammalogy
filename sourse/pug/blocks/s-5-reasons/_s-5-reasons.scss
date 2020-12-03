@@ -1,0 +1,161 @@
+.s-5-reasons {
+	padding: 0 !important  ;
+	position: relative;
+	&__slide{
+	}
+	&__text-block{
+		max-width: 550px; 
+		@include media-breakpoint-up(md) {
+
+			height: 100%;
+			padding-bottom: 80px;
+			height: 900px;
+		}
+	background-color: #f1f5f7;
+	margin-left: -30px;
+	padding-top: 82px;
+	padding-bottom: 140px;
+	padding-left: 50px;
+	padding-right: 15px;
+}
+&__title{
+	margin-bottom: rem(40);
+}
+p{
+	margin-top: 30px;
+	margin-bottom: 55px;
+}
+
+&__btn{
+	@extend .btn;
+	@extend .btn-primary;
+	max-width: 380px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: flex;
+	justify-content: center;align-items: center;
+	height: 60px;
+	font-size: 1rem;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 50px;
+}
+.slick-dots{
+	list-style-type: none;
+	margin-left: -12px;
+	margin-right: -12px;
+	position: absolute;
+	@include media-breakpoint-up(md) {
+
+		bottom: 220px;
+	}
+	bottom: 40px;
+	left: 40px;
+	li{
+		display: inline-block; 
+		font-size: 12px; 
+		height: 1em;
+		width: 1em;
+		margin-left: 1em;
+		margin-right: 1em; 
+		cursor: pointer;
+		position: relative;
+		z-index: 2;
+		&::before,
+		&::after{
+			content: '';
+			@include a-cent;
+			background-color: $primary;
+			z-index: -2;
+			width: 1em;
+			height: 1em;
+			border-radius: 50%;
+			@include mt;
+		}
+		&:hover,
+		&.slick-active{
+			&::before{
+				width: 3em;
+				height: 3em;
+			}
+
+			&::after{
+				z-index: 2;
+				background-color: #ffffff;
+			}
+			// box-shadow: 0 0 0 12px $primary;
+		}
+		button{
+			display: none;
+		}
+	}
+}
+&__container{
+	position: relative;
+	@include media-breakpoint-up(xl) {
+
+		max-width: 1170px;
+	}
+}
+
+	//
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}
+
+.slider-nav{
+	&-wrap{
+		position: absolute;
+		width: 100%;
+		bottom: 20px;
+		left: 0;
+		background-color: #ffffff;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+	}
+	&__item{
+		border: 1px solid #dfdfdf;
+		background-color: #ffffff;
+		height: 170px;
+		@include media-breakpoint-up(lg) {
+
+			padding: 25px 20px;
+			font-size: rem(14);
+		}
+		font-size: rem(13);
+		padding: 10px 10px;
+		cursor: pointer;
+		@include mt;
+		line-height: (18/16);
+		&:hover{
+			color: $primary;
+		}
+	}
+			.slick-current &__item{
+				
+				color: $primary;
+				box-shadow: 0 5px $h5-font-size rgba(238, 100, 162, 0.4);
+				border: 1px solid $primary;
+			}
+}

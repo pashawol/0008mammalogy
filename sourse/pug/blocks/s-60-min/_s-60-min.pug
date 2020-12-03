@@ -1,0 +1,23 @@
+mixin s-60-min()
+	// start s-60-min
+	+b.s-60-min.section.lazy-background#s-60-min&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Удивительно,но потратив всего 60минут в&nbsp;год на&nbsp;общение с&nbsp;маммологом, вы&nbsp;можете спасти себе жизнь
+
+				+e.text Если вы&nbsp;всё ещё в&nbsp;этом сомневаетесь, то, возможно, просто не&nbsp;знаете эти страшные факты:
+			.row
+				mixin item(i, t)
+					+e.col.col-lg-4.col-md-6
+						+e.item
+							+e.img-wrap
+								img.res-i.lazy(src='#' data-srcset=`img/60-min-i-${i}.png`, alt="")
+							p= t
+					// /+e.col.col-lg-4.col-md-6
+				+item('1','Рак молочной железы далеко не всегда вызывает какие-либо жалобы и симптомы на ранних стадиях.')
+				+item('2','У большинства женщин с раком молочной железы не было в семье случаев этого заболевания')
+				+item('3','Около 30% заболевших раком груди моложе 30-35 лет')
+			+e.text-block.lazy-background
+				+e.text Единственный способ ранней диагностики рака молочной железы&nbsp;&mdash; регулярные профосмотры.
+				+e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title="Записаться на приём и провериться на рак у маммолога") Исключить рак
+	// end s-60-min

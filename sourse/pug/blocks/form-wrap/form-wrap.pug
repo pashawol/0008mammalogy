@@ -1,0 +1,46 @@
+mixin form-head()
+	form( method="post" )
+		input(type='hidden', class="order", name='order', value=`Заявка  с сайта`) 
+		block
+mixin input(  t , pl)
+	+e.input-wrap.form-group
+		+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
+		block
+	// +e.input-wrap
+
+mixin form-wrap()
+	+b.form-wrap&attributes(attributes)
+		+form-head()
+			block
+			
+
+mixin ci()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox")
+		+e.SPAN.lab
+		| 
+mixin in-rad(n)
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="radio" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 
+mixin in-ch()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 
+mixin add-file(n)
+	+b.add-file
+		label
+			+e.INPUT.input(name='file', type='file')
+			+e.SPAN.btn 
+			+e.SPAN.text   Прикрепить резюме
+		+e.SPAN.filename 
+
+
+mixin polite()
+	+b.wrap-polite
+		+b.LABEL.custom-input.polite
+			+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
+			+e.SPAN.lab
+			| Я даю согласие на хранение и обработку персональных данных

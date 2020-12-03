@@ -1,0 +1,38 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.block
+				+e.text Если у&nbsp;вас болит грудь или вы&nbsp;нашли в&nbsp;груди уплотнение
+				h1 Пройдите консультацию у&nbsp;наших внимательных маммологов. Точная и&nbsp;быстрая диагностика.
+				.row
+					mixin item(i, t)
+						+e.col.col-md-6
+							+e.item
+								+e.img-wrap
+									img.res-i.lazy(src='#' data-srcset=`img/head-i-${i}.png`, alt="")
+								p= t
+					+item('1','Для диагностики используем редкое оборудование последнего поколения.')
+					+item('2','Хирургическое вмешательство используем только тогда, когда  без этого уже не обойтись.')
+					+item('3','Лечение назначаем по современным европейским стандартам.')
+					
+
+			.row.align-items-center
+				.col-lg-6
+					+e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title="Пройти консультацию") Пройти консультацию
+				.col-lg-6
+					+e.slider-wrap 
+						+e.counter
+							.slideCount2
+						+e.counter-text 
+							span.text-primary Следующий отзыв  
+							| 
+							| (
+							.slideCount
+							|)
+							+e.arrow-wrap
+						+e.slider--js
+							- for (var x = 0; x < 3; x++)
+								+e.slide.text-center
+									img.res-i(src='#' data-lazy="img/rew.jpg", alt="")
+	// end header-block

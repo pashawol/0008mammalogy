@@ -1,0 +1,15 @@
+mixin s-form()
+	// start s-form
+	+b.s-form.lazy-background#s-form&attributes(attributes)
+		.container
+			+e.block.section
+				+e.head
+					+b.section-title
+						.h5.text-primary Наш врач-маммолог, онколог с&nbsp;30-ти летним  стажем,записал пошаговую видео-инструкцию
+						h2 Как потратив 7&nbsp;минут в&nbsp;месяц на&nbsp;самообследование груди, обнаружить уплотнение на&nbsp;ранних стадиях и&nbsp;спасти не&nbsp;только свою грудь, но&nbsp;и&nbsp;жизнь
+					p Это важно. Мы обязаны вам позвонить и проверить всё ли в инструкции было понятно.
+				+form-wrap()
+					+input("tel","Введите свой номер телефона")(name="tel" required) 
+					+e.btn(type="submit")  Провести самообследование под руководством врача
+					+polite
+	// end s-form
