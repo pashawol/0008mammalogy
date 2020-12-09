@@ -466,9 +466,11 @@ $(".header-block__counter-text .text-primary").click(function(){
 		},
 	});
 
-	$('.ba-slider').each(function () {
-		$(this).beforeAfter();
-	})
+	window.setTimeout(function (){
+		$('.ba-slider').each(function () {
+			$(this).beforeAfter();
+		})
+	}, 1000);
 
 	//end luckyoneJs
 
