@@ -465,20 +465,13 @@ mixin sWhat07()
 					+e.lined
 						p Если вы подозреваете у себя гинекомастию из-за спорта, записывайтесь к нам на приём. Чепурко Антон Юрьевич умеет работать с бодибилдерами, пауэрлифтерами и бегунами («соски бегунов»). Цена консультации всего 500 грн.
 					//-+noticeItem('', '')
-mixin compareSlide(imgBefore, imgAfter)
-	.swiper-slide
-		//-delete later
-		+e.slide
-		//-+b.imageReveal--js
-			img(src=`img/${imgBefore}.jpg` alt="")
-			img(src=`img/${imgAfter}.jpg` alt="")
 
 mixin compare(imgBefore, imgAfter)
 	.swiper-slide
 		+e.slide-inner
 			.ba-slider
-				img(src=`img/${imgBefore}.jpg` alt="")
-				img(src=`img/${imgAfter}.jpg` alt="")
+				img(src=`img/${imgBefore}.JPG` alt="")
+				img(src=`img/${imgAfter}.JPG` alt="")
 
 mixin noticeItem(headTxt, txt)
 	+e.n-item
