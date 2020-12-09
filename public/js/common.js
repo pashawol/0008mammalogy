@@ -453,6 +453,7 @@ $(".header-block__counter-text .text-primary").click(function(){
 	let compareSlider = new Swiper('.compare-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 30,
+		allowTouchMove: false,
 
 		//pugination
 		pagination: {
@@ -469,7 +470,10 @@ $(".header-block__counter-text .text-primary").click(function(){
 	window.setTimeout(function (){
 		$('.ba-slider').each(function () {
 			$(this).beforeAfter();
-		})
+		});
+		//$('.ba-slider').each(function (){
+		//	$(this).baSlider();
+		//})
 	}, 1000);
 
 	//end luckyoneJs
