@@ -8,6 +8,7 @@ global.$ = {
 	gulpif: require('gulp-if'), 
 	envDev: false,
 	gp: require('gulp-load-plugins' )(),
+	gcmq: require('gulp-group-css-media-queries'),
 	browserSync: require('browser-sync').create(),
 
 	path: {
@@ -19,7 +20,12 @@ $.path.tasks.forEach(function (taskPath){
 	});
 		
 		 
+// $.gulp.task('default', $.gulp.series(
+// 	$.gulp.parallel('svg','pug','scripts:lib','scripts'),
+// 	$.gulp.parallel('sass','watch','serv')
+// ));
+
 $.gulp.task('default', $.gulp.series(
-	$.gulp.parallel('svg','pug','scripts:lib','scripts'),
+	$.gulp.parallel('svg','pug','scripts'),
 	$.gulp.parallel('sass','watch','serv')
-	));
+));

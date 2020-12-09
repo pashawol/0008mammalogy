@@ -1,0 +1,52 @@
+.sPrice {
+	padding: rem(40) 0 rem(40) 0!important;
+	background-color: darken($light2, 8);
+
+	.section-title{
+		padding-bottom: rem(30);
+		margin-bottom: 0;
+		h2{
+
+		}
+	}
+	&__table{
+		padding-bottom: rem(30);
+	}
+	&__item{
+		@include roww(0);
+		padding-bottom: rem(15);
+		margin-bottom: rem(15);
+
+		border-bottom: 1px solid $body-color;
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+	&__name{
+		span:last-child{
+			font-size: $small;
+		}
+	}
+	&__price{
+		span:first-child{
+			font-size: $small;
+		}
+		span:last-child{
+			font-weight: bold;
+		}
+	}
+	//btn
+	&__btn{
+		max-width: 600px;
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .btn-block;
+		@extend .btn-primary;
+		margin: 0 auto;
+
+		@include media-breakpoint-down(xs){
+			font-size: rem(20);
+		}
+	}
+	&__{}
+}

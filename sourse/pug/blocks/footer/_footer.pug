@@ -25,5 +25,24 @@ mixin footer()
 					+e.logo
 						img.res-i.lazy(src='#' data-srcset="img/logo-foot.png", alt="")
 					+e.text Внимательный осмотр маммолога.  Точная и&nbsp;быстрая диагностика. Обоснованное лекарственное  и&nbsp;хирургичесткое лечение
-					+e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title=`Записаться на приём и провериться
-на рак у маммолога`) Записаться на приём (360 грн)
+					+e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title=`Записаться на приём и провериться на рак у маммолога`) Записаться на приём (360 грн)
+
+mixin footer2()
+	+b.FOOTER.footer
+		.container
+			.row
+				.col-sm-6.col-lg-4.col-xl-3
+					+e.logo
+						img.res-i.lazy(src='#' data-srcset="img/logo-foot.png", alt="")
+					+e.text Внимательный осмотр маммолога.  Точная и&nbsp;быстрая диагностика. Обоснованное лекарственное  и&nbsp;хирургичесткое лечение
+					+e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title=`Записаться на приём и провериться на рак у маммолога`) Записаться на приём (360 грн)
+				.col-sm-6.col-lg-4.offset-lg-4.col-xl-3.offset-xl-6
+					+e.title: span Контакты
+					+e.tel(href="tel:(057)781-01-11") (057) 781-01-11
+					+e.working-hours Пн-пт: 09.00 - 19.00
+						br
+						| Суббота: 09.00 - 16.00
+						br
+						| Воскресенье: выходной.
+					+e.ADDR.addr  г. Харьков. Ул. Пушкинская 14-А
+					+e.copy  © Первая Маммология, 2019

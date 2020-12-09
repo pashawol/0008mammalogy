@@ -6,7 +6,8 @@ module.exports = function (){
 		includePaths: $.bourbon.includePaths
 	}).on("error", $.gp.notify.onError()))
 	//.pipe(gulpif(envDev, sourcemaps.write({includeContent: false, sourceRoot: '/public'})))
-	.pipe($.gulpif(!$.envDev, $.gp.combineMq()))
+	//.pipe($.gulpif(!$.envDev, $.gp.gcmq()))
+	.pipe($.gcmq())
 	.pipe($.gp.rename({suffix: '.min', prefix : ''}))
 	.pipe($.gp.autoprefixer(['last 10 versions']))
 	.pipe($.cleanCSS())
@@ -16,3 +17,5 @@ module.exports = function (){
 }); 
   
 }
+
+//gcmq: require('gulp-group-css-media-queries'),

@@ -1,0 +1,35 @@
+mixin sPrice()
+	// start sPrice
+	+b.sPrice.section#sPrice&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Стоимость операции по удалению гинекомастии
+			+e.table
+				+priceItem('15 000 грн')
+					span Лечение гинекомастии 1 степени
+					br
+					span (одна сторона)
+				+priceItem('18 000 грн')
+					span Лечение гинекомастии 2 степени
+					br
+					span (одна сторона)
+				//-
+				+priceItem('20 000 грн')
+					span Лечение гинекомастии 1 степени
+					br
+					span (две стороны)
+				+priceItem('25 000 грн')
+					span Лечение гинекомастии 2 степени
+					br
+					span (две стороны)
+			+e.btn(href='#') Записаться на консультацию за 500 грн
+	// end sPrice
+
+mixin priceItem(price)
+	+e.item.row
+		+e.name.col-12.col-md-9
+			block
+		+e.price.col-12.col-md-3
+			span цена:
+			br
+			span=price

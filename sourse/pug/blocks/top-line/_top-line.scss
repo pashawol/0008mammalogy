@@ -1,4 +1,9 @@
 .top-line {
+
+  &--light{
+    background-color: $light2;
+  }
+
   font-size: 13px;
   padding-top: 25px;
   .row{

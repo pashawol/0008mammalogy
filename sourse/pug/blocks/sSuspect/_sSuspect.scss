@@ -1,0 +1,85 @@
+.sSuspect {
+	background-color: $light2;
+	padding-bottom: 0!important;
+
+	.section-title{
+		padding-bottom: rem(50);
+		margin-bottom: 0;
+		&__small{
+			color: $pink;
+			@extend .h5;
+			margin-bottom: rem(10);
+		}
+		h1{
+			@include media-breakpoint-up(xl){
+				max-width: 85%;
+			}
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(45);
+			}
+		}
+
+		&__big{
+
+		}
+	}
+
+	&__baner{
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	//content
+	&__content{
+		background-color: darken($light2, 5);
+		padding: rem(30) 0;
+		h4{
+			margin-bottom: rem(30);
+			font-weight: bold;
+			text-align: center;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			@include media-breakpoint-up(sm){
+				columns: 2;
+			}
+
+
+			counter-reset: list 0;
+
+			li{
+
+			}
+			a{
+				list-style-type: none;
+				&:before{
+					@include mt();
+					font-size: rem(18);
+					counter-increment: list;
+					content: counter(list) ". ";
+					color: $primary;
+					font-weight: bold;
+				}
+				display: block;
+				padding-bottom: rem(10px);
+				text-decoration: none;
+
+				color: $body-color;
+				@include mt();
+				&:hover{
+					color: $pink;
+					&:before{
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+	&__{}
+	&__{}
+}

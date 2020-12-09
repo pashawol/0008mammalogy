@@ -1,9 +1,6 @@
 
-mixin modal() 
-	 
+mixin modal()
 	// modal
-	
-
 	#exampleModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel2', aria-hidden='true')
 		+b.modal-text.modal-dialog.modal-win.modal-win.modal-content(role='document')
 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
@@ -59,7 +56,7 @@ mixin modal()
 	//- // modal	
 	#modal-diseases.modal.fade.mx-0(tabindex='-1', role='dialog', aria-labelledby='modal-diseases', aria-hidden='true')
 		.modal-dialog.modal-dialog--lg.modal-dialog-centered
-			+b.form-wrap.p-0.mx-0()( class=" modal-win modal-form    modal-content" role='document')
+			+b.form-wrap.p-0.mx-0( class=" modal-win modal-form    modal-content" role='document')
 				+b.diseases.lazy-background
 					.container.px-0
 						.row
@@ -610,14 +607,11 @@ mixin modal()
 																|— переизбыток молока,
 																br
 																|— длительные перерывы между кормлениями
-										+e.btn-wrap: +e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title=`Записаться на приём и провериться на рак у маммолога`) Записаться на приём  
-
-						
-
+										+e.btn-wrap: +e.btn(href="#" data-toggle="modal" data-target="#modal-win" data-title=`Записаться на приём и провериться на рак у маммолога`) Записаться на приём
 	// /#modal-diseases
 	#modal-thank-lg.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-thank-lg', aria-hidden='true')
 		.modal-dialog.modal-dialog--lg.modal-dialog-centered
-			+b.form-wrap.px-0()( class=" modal-win modal-form    modal-content" role='document')
+			+b.form-wrap.px-0( class=" modal-win modal-form    modal-content" role='document')
 				.container.px-0
 					.row
 						.col-xl-8.col-lg-7.col-md-6

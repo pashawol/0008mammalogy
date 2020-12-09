@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-60-min/_s-60-min.pug
+include ../blocks/s-5-reasons/_s-5-reasons.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-team/_s-team.pug
+
+include ../blocks/sSuspect/_sSuspect.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sPrice/_sPrice.pug
+
+block title
+	title title
+
+block pagecontent
+	+top-line()(class="top-line--light")
+	+sSuspect()
+	+sWhat()
+	+sWhat02()
+	+sWhat03()
+	+sWhat04()
+	+sWhat05()
+	+sPrice()
+	+sWhat06()
+	+sWhat07()
+	+s-contact()
+	+footer2()
+	
+	
