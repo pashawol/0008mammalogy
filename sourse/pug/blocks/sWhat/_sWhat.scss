@@ -287,31 +287,6 @@
 			//}
 		}
 
-		//pugin
-		.compare-pugin{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: wrap;
-			padding: rem(30) 0 rem(20) 0;
-
-			.swiper-pagination-bullet{
-				width: rem(14);
-				height: rem(14);
-				margin: rem(7);
-
-				outline: none!important;
-				border: none!important;
-				box-shadow: none!important;
-
-				@include mt();
-				background-color: rgba(lighten($primary, 10), 1);
-				&-active, &:hover{
-					background-color: darken($primary, 3);
-				}
-			}
-		}
-
 		//prev, next
 		.compare-next,
 		.compare-prev{
@@ -351,6 +326,31 @@
 	.ba-right-arrow{
 		opacity: 1!important;
 		display: block!important;
+	}
+
+	//pugin
+	.compare-pugin{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: rem(30) 0 rem(20) 0;
+
+		.swiper-pagination-bullet{
+			width: rem(14);
+			height: rem(14);
+			margin: rem(7);
+
+			outline: none!important;
+			border: none!important;
+			box-shadow: none!important;
+
+			@include mt();
+			background-color: rgba(lighten($primary, 10), 1);
+			&-active, &:hover{
+				background-color: darken($primary, 3);
+			}
+		}
 	}
 
 }
